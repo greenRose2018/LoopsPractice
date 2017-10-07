@@ -8,7 +8,7 @@ public class Pancake
 	private boolean toppingsSyrup;
 	private int numFruits; 
 	
-	private Pancake()
+	public Pancake()
 	{
 		this.flavor = "buttermilk";
 		this.shape = "round";
@@ -22,11 +22,7 @@ public class Pancake
 		this.flavor = flavor;
 		this.shape = shape;
 	}
-	public String toString()
-	{
-		String description = "this pancake is a " + flavor + "and is a " + shape + "pancake.";
-		return description;
-	}
+	
 	
 	public String getShape()
 	{
@@ -47,5 +43,9 @@ public class Pancake
 	{
 		this.flavor = flavor;
 	}
-	
+	public String toString()
+	{
+		String description = "this pancake is a " + flavor + "and is a " + shape + "pancake.";
+		return description;
+	}
 }
