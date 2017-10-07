@@ -10,6 +10,12 @@ public class Pancake
 	
 	private Pancake()
 	{
-		
+		this.flavor = "buttermilk";
+		this.shape = "round";
+		this.sweet = false;
+		this.toppingsSyrup = false;
+		this.numFruits = 0;
 	}
+	
+	
 }
