@@ -16,6 +16,12 @@ public class Pancake
 		this.toppingsSyrup = false;
 		this.numFruits = 0;
 	}
+	public Pancake(String flavor, String shape)
+	{
+		this();
+		this.flavor = flavor;
+		this.shape = shape;
+	}
 	
 	
 }
