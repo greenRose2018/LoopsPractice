@@ -22,6 +22,12 @@ public class Pancake
 		this.flavor = flavor;
 		this.shape = shape;
 	}
+	public String toString()
+	{
+		String description = "this pancake is a " + flavor + "and is a " + shape + "pancake.";
+		return description;
+	}
+	
 	
 	
 }
