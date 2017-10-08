@@ -36,7 +36,11 @@ public class UsefulController
 		
 	}
 	private void interactingWithPancake()
+	private void interactingWithPancake(Pancake currentPancake)
 	{
+		
+		
+		
 		String favPancake = display.getResponse("Mr.Fluff wants to know what flavor of pancake you like?");
 		display.displayText("You like " + favPancake + " pancake!!");
 		display.displayText("Now, Mr.Fluff wants you to make your own pancake!!");
@@ -72,6 +76,23 @@ public class UsefulController
 			display.displayText("Only integervalues are valid: " + waffle + "is not valid");
 		}
 		
+		return valid;
+	}
+	
+	private boolean isValidBoolean(String waffle)
+	{
+		boolean valid = false;
+		
+		try
+		{
+			Boolean.parseBoolean(waffle);
+			valid = true;
+			
+		}
+		catch(NumberFormatException error)
+		{
+			display.displayText("only Yes or NO. Not " + waffle );
+		}
 		return valid;
 	}
 }
