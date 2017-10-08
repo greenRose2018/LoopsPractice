@@ -88,6 +88,38 @@ public class UsefulController
 			display.displayText("You want " + numPan + " of pancakes.");
 		}
 		
+		
+		String flavorOfPancake = display.getResponse("What flavor do you want your Pancake to be??");
+		display.displayText("You want all " + numOfPancake + " pancakes to be " + flavorOfPancake);
+		
+		int numTops = 0;
+		String toppingPancake = display.getResponse("How many toppings do you want?");
+		while(!isValidInteger(toppingPancake))
+		{
+			display.displayText("Try again!");
+			toppingPancake = display.getResponse("How many toppings");
+		}
+		numTops = Integer.parseInt(toppingPancake);
+		int tops = 0;
+		tops = numTops;
+		
+		if (tops < 0)
+		{
+			display.displayText("you can't have a negative amount silly");
+		}
+		else if (tops == 0)
+		{
+			display.displayText("You don't like toppings, me too.");
+		}
+		else
+		{
+			currentPancake.setNumFruits(currentPancake.getNumFruits());
+			display.displayText("Thank you now you have " + numOfPancake + " pancakes that are " + flavorOfPancake + " with " + toppingPancake + " toppings");	
+		}
+		
+		
+	}
+	
 	//helper methods
 	private boolean isValidInteger(String waffle)
 	{
