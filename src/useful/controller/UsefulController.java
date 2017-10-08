@@ -19,11 +19,13 @@ public class UsefulController
 	}
 	public void start()
 	{
-		display.displayText("hello");
+		display.displayText("Hello, my name is Mr.Fluff");
 		Pancake sample = new Pancake();
 		display.displayText(sample.toString());
 		
-		interactingWithPancake();
+		interactingWithPancake(sample);
+		fillTheList();
+		showTheList();
 	}
 	
 	private void showTheList()
