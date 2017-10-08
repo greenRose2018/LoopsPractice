@@ -16,13 +16,23 @@ public class Pancake
 		this.toppingsSyrup = false;
 		this.numFruits = 0;
 	}
-	public Pancake(String flavor, String shape)
+	public Pancake(String flavor, String shape, int numFruits)
 	{
 		this();
 		this.flavor = flavor;
 		this.shape = shape;
+		this.numFruits = numFruits;
 	}
 	
+	public int getNumFruits()
+	{
+		return numFruits;
+	}
+	
+	public void setNumFruits(int numFruits)
+	{
+		this.numFruits = numFruits;
+	}
 	
 	public String getShape()
 	{
@@ -45,7 +55,7 @@ public class Pancake
 	}
 	public String toString()
 	{
-		String description = "this pancake is a " + flavor + "and is a " + shape + "pancake.";
+		String description = "this pancake is a " + flavor + " and is a " + shape + " pancake. Also, has " + numFruits + " toppings.";
 		return description;
 	}
 }
