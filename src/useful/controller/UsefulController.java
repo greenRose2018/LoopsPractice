@@ -23,6 +23,7 @@ public class UsefulController
 		Pancake sample = new Pancake();
 		display.displayText(sample.toString());
 		
+		interactingWithPancake();
 	}
 	
 	private void showTheList()
@@ -34,5 +35,9 @@ public class UsefulController
 	{
 		
 	}
-
+	private void interactingWithPancake()
+	{
+		String favPancake = display.getResponse("Mr.Fluff wants to know what flavor of pancake you like?");
+		display.displayText("You like " + favPancake + " pancake!!");
+		display.displayText("Now, Mr.Fluff wants you to make your own pancake!!");
 }
