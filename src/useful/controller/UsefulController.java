@@ -61,6 +61,33 @@ public class UsefulController
 			display.displayText("You can't put negative numbers, silly person.");
 		}
 		
+		if(numPan == 0)
+		{
+			display.displayText("You don't want Pancakes.");
+			boolean yesOrNo = false;
+			String answer = display.getResponse("Do you want to cancel the program? ( True or False )");
+			
+			while(!isValidBoolean(answer))
+			{
+				display.displayText("wrong, yet again! try again");
+				answer = display.getResponse("True or false, pick one !!");
+			}
+			
+			yesOrNo = Boolean.parseBoolean(answer);
+			boolean yep = false;
+			yep = yesOrNo;
+			
+			if (yep == true)
+			{
+				System.exit(numPan);
+			}
+			
+		}
+		else
+		{
+			display.displayText("You want " + numPan + " of pancakes.");
+		}
+		
 	//helper methods
 	private boolean isValidInteger(String waffle)
 	{
