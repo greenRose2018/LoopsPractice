@@ -28,14 +28,35 @@ public class UsefulController
 	
 	private void showTheList()
 	{
-		
+		String favorite = "Strawberry flavor";
+		for (int flavor = 0; flavor < pancakeList.size(); flavor++)
+		{
+			String currentFlavor = pancakeList.get(flavor).getFlavor();
+			
+			Pancake currentPancake = pancakeList.get(flavor);
+			String index = currentPancake.getFlavor();
+			
+			if (currentFlavor.equals(favorite))
+			{
+				for( int woop = 1; woop < 2; woop += 1)
+				{
+					display.displayText("The best Flavor for a pancake Ever!!");
+				}
+			}
+			display.displayText(pancakeList.get(flavor).toString());
+		}
 	}
 	
 	private void fillTheList()
 	{
+		Pancake strawberryFlavor = new Pancake("Strawberry flavor", "round", 1);
+		Pancake bananaFlavor = new Pancake("Bannana Flavored", "round", 1);
+		Pancake chocolateFlavor = new Pancake("Chocolate Flavored", "round", 1);
 		
+		pancakeList.add(strawberryFlavor);
+		pancakeList.add(chocolateFlavor);
+		pancakeList.add(bananaFlavor);
 	}
-	private void interactingWithPancake()
 	private void interactingWithPancake(Pancake currentPancake)
 	{
 		
