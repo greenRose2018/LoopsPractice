@@ -26,6 +26,7 @@ public class UsefulController
 		interactingWithPancake(sample);
 		fillTheList();
 		showTheList();
+		tryingForEach();
 	}
 	
 	private void showTheList()
@@ -142,7 +143,20 @@ public class UsefulController
 		
 		
 	}
-	
+	public void tryingForEach()
+	{
+		String [] flavors = {"Strawberry", "Blueberry", "Chocolate", "Banana" };
+		for(String flavor : flavors)
+		{
+			display.displayText("The pancakes " + flavor + " .");
+		}
+		
+		String [] topings = {"banana", "syrup","frosting", "blueberris"};
+		for(String tops : topings)
+		{
+			display.displayText("Toppings that go on a Pancake, " + tops + ".");
+		}
+	}
 	//helper methods
 	private boolean isValidInteger(String waffle)
 	{
