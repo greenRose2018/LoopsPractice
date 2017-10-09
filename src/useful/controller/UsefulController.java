@@ -146,7 +146,7 @@ public class UsefulController
 	public void tryingForEach()
 	{
 		String [] flavors = {"Strawberry", "Blueberry", "Chocolate", "Banana" };
-		for(String flavor : flavors)
+		for(String flavor : flavors) // my Favorite Because its the easiest to use!!!
 		{
 			display.displayText("The pancakes " + flavor + " .");
 		}
