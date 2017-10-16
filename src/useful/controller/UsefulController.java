@@ -19,9 +19,9 @@ public class UsefulController
 	}
 	public void start()
 	{
-		display.displayText("Hello, my name is Mr.Fluff");
+		display.displayText("Hello, my name is Mr.Fluff, I'm a pancake.");
 		Pancake sample = new Pancake();
-		display.displayText(sample.toString());
+		display.displayText(sample.toStrings() + " I'm a plain pancake.");
 		
 		interactingWithPancake(sample);
 		fillTheList();
@@ -31,6 +31,8 @@ public class UsefulController
 	
 	private void showTheList()
 	{
+		//display.displayText("The start of the best Flavor.");
+		
 		String favorite = "Strawberry flavor";
 		for (int flavor = 0; flavor < pancakeList.size(); flavor++)
 		{
@@ -63,7 +65,7 @@ public class UsefulController
 	private void interactingWithPancake(Pancake currentPancake)
 	{
 		
-		
+		display.displayText("The start of interacting with Mr.Fluff.");
 		
 		String favPancake = display.getResponse("Mr.Fluff wants to know what flavor of pancake you like?");
 		display.displayText("You like " + favPancake + " pancake!!");
@@ -145,6 +147,7 @@ public class UsefulController
 	}
 	public void tryingForEach()
 	{
+		display.displayText("The start of listing flavors, and toppings.");
 		String [] flavors = {"Strawberry", "Blueberry", "Chocolate", "Banana" };
 		for(String flavor : flavors) // my Favorite Because its the easiest to use!!!
 		{

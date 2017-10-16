@@ -55,7 +55,12 @@ public class Pancake
 	}
 	public String toString()
 	{
-		String description = "this pancake is a " + flavor + " and is a " + shape + " pancake. Also, has " + numFruits + " toppings.";
+		String description = "this pancake is a " + flavor + " also, has " + numFruits + " toppings.";
+		return description;
+	}
+	public String toStrings()
+	{
+		String description = "I'm a  " + flavor + " pancake, with " + numFruits + " types of toppings.";
 		return description;
 	}
 }
